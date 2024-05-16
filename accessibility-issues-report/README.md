@@ -112,6 +112,8 @@ Search engines may use href attributes on links to crawl websites. Ensure that t
 
 </details>
 
+[Full audit could be found here >>](https://www.webpagetest.org/lighthouse.php?test=240516_BiDcJV_C9P&f=lh-viewer)
+
 ### WAVE Chrome extention
 
 #### Errors
@@ -153,3 +155,5 @@ Search engines may use href attributes on links to crawl websites. Ensure that t
 ![WAVE structural elements examples](assets/Screenshot_2024_05_16-19.png 'WAVE structural elements examples')
 
 ![WAVE contrast structural elements examples](assets/Screenshot_2024_05_16-20.png 'WAVE structural elements examples')
+
+[Full audit could be found here >>](https://wave.webaim.org/report#/https://kuzanatoliy.github.io/accessibility-training-2024/)
