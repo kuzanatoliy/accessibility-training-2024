@@ -111,3 +111,41 @@ Informative elements should aim for short, descriptive alternate text. Decorativ
 Search engines may use href attributes on links to crawl websites. Ensure that the href attribute of anchor elements links to an appropriate destination, so more pages of the site can be discovered.
 
 </details>
+
+### WAVE Chrome extention
+
+#### Errors
+
+![WAVE errors](assets/Screenshot_2024_05_16-10.png 'WAVE errors')
+
+![WAVE errors examples](assets/Screenshot_2024_05_16-6.png 'WAVE errors examples')
+
+![WAVE errors examples](assets/Screenshot_2024_05_16-7.png 'WAVE errors examples')
+
+![WAVE errors examples](assets/Screenshot_2024_05_16-8.png 'WAVE errors examples')
+
+![WAVE errors examples](assets/Screenshot_2024_05_16-9.png 'WAVE errors examples')
+
+![WAVE errors examples](assets/Screenshot_2024_05_16-15.png 'WAVE errors examples')
+
+![WAVE errors examples](assets/Screenshot_2024_05_16-16.png 'WAVE errors examples')
+
+![WAVE errors examples](assets/Screenshot_2024_05_16-12.png 'WAVE errors examples')
+
+![WAVE contrast errors](assets/Screenshot_2024_05_16-11.png 'WAVE contrast errors')
+
+![WAVE contrast errors examples](assets/Screenshot_2024_05_16-16.png 'WAVE contrast errors examples')
+
+![WAVE contrast errors examples](assets/Screenshot_2024_05_16-15.png 'WAVE contrast errors examples')
+
+![WAVE contrast errors examples](assets/Screenshot_2024_05_16-13.png 'WAVE contrast errors examples')
+
+![WAVE contrast errors examples](assets/Screenshot_2024_05_16-14.png 'WAVE contrast errors examples')
+
+![WAVE alerts](assets/Screenshot_2024_05_16-17.png 'WAVE alerts')
+
+![WAVE structural elements](assets/Screenshot_2024_05_16-18.png 'WAVE structural elements')
+
+[WAVE structural elements examples](assets/Screenshot_2024_05_16-14.png 'WAVE structural elements examples')
+
+[WAVE contrast structural elements examples](assets/Screenshot_2024_05_16-14.png 'WAVE structural elements examples')
