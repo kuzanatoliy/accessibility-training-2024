@@ -1,10 +1,10 @@
 # Accessibility issues report
 
-### Lighthouse
+## Lighthouse
 
 > The section contains issues from accessibility and seo sections of lighthouse report
 
-#### Names and labels
+### Names and labels
 
 <details>
   <summary>Image elements do not have [alt] attributes</summary>
@@ -53,7 +53,7 @@ Low-contrast text is difficult or impossible for many users to read.
 
 </details>
 
-#### International & Localization
+### International & Localization
 
 <details>
   <summary>html element does not have a [lang] attribute</summary>
@@ -62,7 +62,7 @@ If a page doesn't specify a lang attribute, a screen reader assumes that the pag
 
 </details>
 
-#### Mobile friendly
+### Mobile friendly
 
 <details>
   <summary>Does not have a meta viewport tag with width or initial-scaleNo</summary>
@@ -85,7 +85,7 @@ Interactive elements like buttons and links should be large enough (48x48px), or
 
 </details>
 
-#### Content and best practices
+### Content and best practices
 
 <details>
   <summary>Document does not have a meta description</summary>
@@ -103,7 +103,7 @@ Informative elements should aim for short, descriptive alternate text. Decorativ
 
 </details>
 
-#### Crawling and Indexing
+### Crawling and Indexing
 
 <details>
   <summary>Links are not crawlable</summary>
@@ -114,9 +114,9 @@ Search engines may use href attributes on links to crawl websites. Ensure that t
 
 [Full audit could be found here >>](https://www.webpagetest.org/lighthouse.php?test=240516_BiDcJV_C9P&f=lh-viewer)
 
-### WAVE Chrome extention
+## WAVE Chrome extention
 
-#### Errors
+### Errors
 
 ![WAVE errors](assets/Screenshot_2024_05_16-10.png 'WAVE errors')
 
@@ -132,7 +132,7 @@ Search engines may use href attributes on links to crawl websites. Ensure that t
 
 ![WAVE errors examples](assets/Screenshot_2024_05_16-12.png 'WAVE errors examples')
 
-#### Contrast errors
+### Contrast errors
 
 ![WAVE contrast errors](assets/Screenshot_2024_05_16-11.png 'WAVE contrast errors')
 
@@ -144,11 +144,11 @@ Search engines may use href attributes on links to crawl websites. Ensure that t
 
 ![WAVE contrast errors examples](assets/Screenshot_2024_05_16-14.png 'WAVE contrast errors examples')
 
-#### Alerts
+### Alerts
 
 ![WAVE alerts](assets/Screenshot_2024_05_16-17.png 'WAVE alerts')
 
-#### Structural elements
+### Structural elements
 
 ![WAVE structural elements](assets/Screenshot_2024_05_16-18.png 'WAVE structural elements')
 
@@ -157,3 +157,23 @@ Search engines may use href attributes on links to crawl websites. Ensure that t
 ![WAVE contrast structural elements examples](assets/Screenshot_2024_05_16-20.png 'WAVE structural elements examples')
 
 [Full audit could be found here >>](https://wave.webaim.org/report#/https://kuzanatoliy.github.io/accessibility-training-2024/)
+
+## EXE Chrome extention
+
+![EXE contrast error example](assets/Screenshot_2024_05_16-21.png 'EXE contrast error example')
+
+![EXE lang attribute error example](assets/Screenshot_2024_05_16-22.png 'EXE lang attribute error example')
+
+![EXE alt attribute error example](assets/Screenshot_2024_05_16-23.png 'EXE alt attribute error example')
+
+![EXE label attribute error example](assets/Screenshot_2024_05_16-24.png 'EXE label attribute error example')
+
+![EXE descernible text example](assets/Screenshot_2024_05_16-25.png 'EXE descernible text example')
+
+![EXE accessible name example](assets/Screenshot_2024_05_16-26.png 'EXE accessible name example')
+
+![EXE main landmark example](assets/Screenshot_2024_05_16-27.png 'EXE main landmark example')
+
+![EXE level-one heading example](assets/Screenshot_2024_05_16-28.png 'EXE level-one heading example')
+
+![EXE landmark example](assets/Screenshot_2024_05_16-29.png 'EXE landmark example')
