@@ -1,8 +1,8 @@
-@use "~sass-rem" as rem;
-@import "variables";
-@import "sets";
+@use '~sass-rem' as rem;
+@import 'variables';
+@import 'sets';
 
-.header {
+header {
   padding: rem.convert(20px 0);
 
   background-color: $main-color;
