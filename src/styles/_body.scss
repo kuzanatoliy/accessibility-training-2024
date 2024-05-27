@@ -1,6 +1,7 @@
 @use "~sass-rem" as rem;
 @import "variables";
 @import "sets";
+@import "mixins";
 
 * {
   &,
@@ -85,16 +86,17 @@ button {
 
 .button {
   @extend %button;
+  line-height: 1.5;
+
+  &:focus {
+    @include focus(2px,4px,#0a5a8f,-4px);
+  }
 
   &-primary {
     color: $main-color-light;
     background: $main-color-interactive;
 
     border-color: $main-color-interactive;
-
-    &:focus {
-      outline-color: $main-color-interactive;
-    }
 
     &:hover {
       color: $main-color-interactive;
@@ -107,10 +109,6 @@ button {
     background: $main-color-light;
 
     border-color: $main-color-interactive;
-
-    &:focus {
-      outline-color: $main-color-interactive;
-    }
 
     &:hover {
       color: $main-color-interactive;

@@ -154,6 +154,10 @@ header {
         color: $main-color;
         background: $main-color-light;
       }
+
+      &:focus {
+        @include focus();
+      }
     }
   }
 }

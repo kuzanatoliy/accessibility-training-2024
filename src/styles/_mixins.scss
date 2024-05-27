@@ -1,4 +1,4 @@
-@mixin focus($width: 2px, $radius: 0px, $color: #0a5a8f, $inset: $width) {
+@mixin focus($width: 2px, $radius: 2px, $color: #0a5a8f, $inset: -2px) {
   position: relative;
   border-radius: $radius;
   &::before {
