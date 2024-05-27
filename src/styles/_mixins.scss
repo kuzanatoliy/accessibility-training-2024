@@ -1,0 +1,12 @@
+@mixin focus($width: 2px, $radius: 0px, $color: #209cee, $inset: $width) {
+  position: relative;
+  border-radius: $radius;
+  &::before {
+    position: absolute;
+    inset: $inset;
+    pointer-events: none;
+    content: '';
+    border: $width solid $color;
+    border-radius: inherit;
+  }
+}
