@@ -78,10 +78,20 @@ input {
 }
 
 a,
-button {
+button,
+input,
+textarea,
+select {
   &:focus {
     outline: none !important;
   }
+}
+
+input,
+textarea,
+select {
+  border: none;
+  border-radius: 2px;
 }
 
 .button {
