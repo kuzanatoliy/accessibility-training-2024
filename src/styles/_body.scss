@@ -1,7 +1,7 @@
-@use "~sass-rem" as rem;
-@import "variables";
-@import "sets";
-@import "mixins";
+@use '~sass-rem' as rem;
+@import 'variables';
+@import 'sets';
+@import 'mixins';
 
 * {
   &,
@@ -89,7 +89,7 @@ button {
   line-height: 1.5;
 
   &:focus {
-    @include focus(2px,4px,#0a5a8f,-4px);
+    @include focus(2px, 4px, #0a5a8f, -4px);
   }
 
   &-primary {
@@ -115,4 +115,8 @@ button {
       background: $main-color-light;
     }
   }
+}
+
+.visually-hidden {
+  font-size: 0;
 }
