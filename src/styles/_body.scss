@@ -43,9 +43,15 @@ table {
   width: 100%;
   table-layout: fixed;
 
-  td {
+  caption {
+    text-align: left;
+  }
+
+  td,
+  th {
     padding: rem.convert(8px 12px);
     vertical-align: top;
+    text-align: left;
 
     border-bottom: 1px solid $main-bg-dark;
   }
