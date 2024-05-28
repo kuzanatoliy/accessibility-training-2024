@@ -285,6 +285,24 @@ figure {
     display: flex;
     gap: rem.convert(16px);
   }
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    width: fit-content;
+    aspect-ratio: 1 / 1;
+    margin: 0 0 0 20px;
+    position: relative;
+    top: -1px;
+    &:focus {
+      @include focus();
+    }
+  }
+
+  input[type='radio'] {
+    &::before {
+      border-radius: 9in !important;
+    }
+  }
 }
 
 .form-control {
@@ -296,5 +314,11 @@ figure {
 .select {
   .input-container {
     width: fit-content;
+  }
+}
+
+.link {
+  &:focus {
+    @include focus();
   }
 }
