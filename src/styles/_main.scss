@@ -318,7 +318,14 @@ figure {
 }
 
 .link {
+  width: fit-content;
   &:focus {
     @include focus();
   }
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }

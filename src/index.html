@@ -19,7 +19,7 @@
         </a>
 
         <nav id="navbarMenu" class="navbar">
-          <button class="navbar-mobile-button" data-target="navbarMenu">
+          <button class="navbar-mobile-button" data-target="navbarMenu" aria-label="Open menu">
             <span></span>
             <span></span>
             <span></span>
@@ -320,8 +320,9 @@
               </div>
             </div>
 
-            <div class="field">
-              <div class="control">
+            <fieldset class="field">
+              <legend>Do you agree with the processing of data?</legend>
+              <div class="control radio-group">
                 <label class="form-control">
                   <input type="radio" name="question" />
                   Yes
@@ -331,7 +332,7 @@
                   No
                 </label>
               </div>
-            </div>
+            </fieldset>
 
             <div class="actions">
               <button class="button button-primary">Submit</button>
@@ -350,8 +351,10 @@
               <div class="title-medium"><b>News</b></div>
               <ul>
                 <li>
-                  <a href="https://www.w3.org/TR/WCAG22/">Latest changes in specification</a
-                  ><span class="visually-hidden">Opens an external website</span>
+                  <a href="https://www.w3.org/TR/WCAG22/"
+                    >Latest changes in specification<span class="visually-hidden">Opens an external website</span>
+                    <i class="fa fa-external-link fa-1" aria-hidden="true"></i
+                  ></a>
                 </li>
                 <li><a href="#">Our new courses and trainings</a></li>
               </ul>
@@ -361,8 +364,9 @@
               <ul>
                 <li>
                   <a href="https://www.w3.org/WAI/ARIA/apg/patterns/"
-                    >Useful links<span class="visually-hidden">Opens an external website</span></a
-                  >
+                    >Useful links<span class="visually-hidden">Opens an external website</span>
+                    <i class="fa fa-external-link fa-1" aria-hidden="true"></i
+                  ></a>
                 </li>
                 <li><a href="#">How to find us</a></li>
               </ul>
@@ -372,14 +376,20 @@
 
         <div class="footer-content">
           <div class="social">
-            <a><i class="fab fa-github-alt fa-2x"></i></a>
-            <a><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="https://github.com/"
+              ><i class="fab fa-github-alt fa-2x"></i
+              ><span class="visually-hidden">Github. Opens an external website</span></a
+            >
+            <a href="https://www.youtube.com/"
+              ><i class="fab fa-youtube fa-2x"></i
+              ><span class="visually-hidden">Youtube. Opens an external website</span></a
+            >
           </div>
           <p>
-            The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.<span
-              class="visually-hidden"
-              >Opens an external website</span
-            >
+            The source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php"
+              >MIT <i class="fa fa-external-link fa-1" aria-hidden="true"></i></a
+            >.
           </p>
         </div>
       </div>
@@ -387,7 +397,7 @@
 
     <div id="modal-card" class="modal hidden">
       <div class="modal-content">
-        <button class="modal-close" data-target="modal-card"></button>
+        <button class="modal-close" data-target="modal-card" aria-label="Close modal"></button>
         <div class="modal-image">
           <img src="https://source.unsplash.com/random/?sig=2" alt="Best customers story's logo" />
         </div>
@@ -405,7 +415,7 @@
 
     <div id="modal-image" class="modal hidden">
       <div class="modal-content is-huge is-image">
-        <button class="modal-close" data-target="modal-image"></button>
+        <button class="modal-close" data-target="modal-image" aria-label="Close modal"></button>
         <img src="https://source.unsplash.com/random/?sig=1" alt="Best customers story's logo" />
       </div>
     </div>

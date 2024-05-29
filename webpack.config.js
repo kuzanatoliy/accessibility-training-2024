@@ -12,12 +12,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: [
-          MiniCssExtractPlugin.loader, 
-          'css-loader',
-          'sass-loader',
-        ],
+        test: /\.(scss|css)$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
@@ -29,13 +25,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
-    new MiniCssExtractPlugin({ 
+    new MiniCssExtractPlugin({
       filename: 'index.css',
     }),
     new CopyWebpackPlugin({
-      patterns: [
-        { from: 'src/img', to: 'images' },
-      ],
+      patterns: [{ from: 'src/img', to: 'images' }],
     }),
   ],
   devServer: {
@@ -45,8 +39,6 @@ module.exports = {
     compress: true,
     port: 9000,
     open: true,
-    watchFiles: [
-      path.resolve(__dirname, 'src'), 
-    ],
+    watchFiles: [path.resolve(__dirname, 'src')],
   },
 };
