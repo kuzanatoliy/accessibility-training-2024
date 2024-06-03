@@ -1,6 +1,7 @@
-@use "~sass-rem" as rem;
-@import "variables";
-@import "sets";
+@use '~sass-rem' as rem;
+@import 'variables';
+@import 'sets';
+@import 'mixins';
 
 * {
   &,
@@ -42,9 +43,15 @@ table {
   width: 100%;
   table-layout: fixed;
 
-  td {
+  caption {
+    text-align: left;
+  }
+
+  td,
+  th {
     padding: rem.convert(8px 12px);
     vertical-align: top;
+    text-align: left;
 
     border-bottom: 1px solid $main-bg-dark;
   }
@@ -77,24 +84,35 @@ input {
 }
 
 a,
-button {
+button,
+input,
+textarea,
+select {
   &:focus {
     outline: none !important;
   }
 }
 
+input,
+textarea,
+select {
+  border: none;
+  border-radius: 2px;
+}
+
 .button {
   @extend %button;
+  line-height: 1.5;
+
+  &:focus {
+    @include focus(2px, 4px, #0a5a8f, -4px);
+  }
 
   &-primary {
     color: $main-color-light;
     background: $main-color-interactive;
 
     border-color: $main-color-interactive;
-
-    &:focus {
-      outline-color: $main-color-interactive;
-    }
 
     &:hover {
       color: $main-color-interactive;
@@ -108,13 +126,17 @@ button {
 
     border-color: $main-color-interactive;
 
-    &:focus {
-      outline-color: $main-color-interactive;
-    }
-
     &:hover {
       color: $main-color-interactive;
       background: $main-color-light;
     }
   }
+}
+
+.visually-hidden {
+  font-size: 0;
+}
+
+a {
+  display: inline-block;
 }

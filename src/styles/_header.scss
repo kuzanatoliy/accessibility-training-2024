@@ -1,8 +1,9 @@
-@use "~sass-rem" as rem;
-@import "variables";
-@import "sets";
+@use '~sass-rem' as rem;
+@import 'variables';
+@import 'sets';
+@import 'mixins';
 
-.header {
+header {
   padding: rem.convert(20px 0);
 
   background-color: $main-color;
@@ -25,6 +26,10 @@
     justify-content: center;
     width: rem.convert(250px);
     height: min-content;
+
+    &:focus {
+      @include focus();
+    }
 
     img {
       width: 100%;
@@ -148,6 +153,10 @@
       &:hover {
         color: $main-color;
         background: $main-color-light;
+      }
+
+      &:focus {
+        @include focus();
       }
     }
   }
