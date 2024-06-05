@@ -150,21 +150,26 @@
         <div class="container">
           <h2 id="fourth-title" class="title title-2 text-center is-light">Our achievements</h2>
           <div class="subtitle text-center is-light">We are always ready to tell you about our success</div>
-          <div class="tab-list">
-            <span class="tab is-active" id="stories"> Success stories </span>
-            <span class="tab" id="team"> Our team </span>
-            <span class="tab" id="video"> Video </span>
+          <div role="tablist" aria-orientation="horizontal" class="tab-list" aria-labelledby="fourth-title">
+            <span role="tab" aria-controls="tab-panel1" class="tab is-active" id="stories"> Success stories </span>
+            <span role="tab" aria-controls="tab-panel2" class="tab" id="team"> Our team </span>
+            <span role="tab" aria-controls="tab-panel3" class="tab" id="video"> Video </span>
           </div>
         </div>
 
-        <div class="tab-panel-container is-bg-secondary">
+        <div
+          role="tabpanel"
+          aria-labelledby="tab-panel-title1"
+          id="tab-panel1"
+          class="tab-panel-container is-bg-secondary"
+        >
           <div class="container">
             <div class="tab-panel is-active" id="panel-1" data-panel="stories">
               <div class="card-container">
                 <div class="card">
                   <img src="./images/customer-story-1.jpg" alt="Best customer ordering story" />
                   <div class="card-content">
-                    <h3 class="card-title">Best customer's story</h3>
+                    <h3 id="tab-panel-title1" class="card-title">Best customer's story</h3>
                     <p>
                       We have achieved customer satisfaction and income increase after having implemented accessibility.
                     </p>
@@ -201,12 +206,20 @@
               </div>
             </div>
 
-            <div class="tab-panel" id="panel-2" hidden data-panel="team">
+            <div
+              role="tabpanel"
+              aria-labelledby="tab-panel-title2"
+              id="tab-panel2"
+              class="tab-panel"
+              id="panel-2"
+              hidden
+              data-panel="team"
+            >
               <div class="columns medias">
                 <div class="column">
                   <i class="fab fa-empire fa-4x" aria-hidden="true"></i>
                   <div class="content">
-                    <h3>Solution architect</h3>
+                    <h3 id="tab-panel-title2">Solution architect</h3>
                     <p>Please read about our team happiness</p>
                   </div>
                 </div>
@@ -222,8 +235,16 @@
               </div>
             </div>
 
-            <div class="tab-panel" id="panel-3" hidden data-panel="video">
-              <h3 class="title title-3 text-center">Inspiring video</h3>
+            <div
+              role="tabpanel"
+              aria-labelledby="tab-panel-title3"
+              id="tab-panel3"
+              class="tab-panel"
+              id="panel-3"
+              hidden
+              data-panel="video"
+            >
+              <h3 id="tab-panel-title3" class="title title-3 text-center">Inspiring video</h3>
               <div class="embed-container image">
                 <iframe
                   title="Undisturbed Norway - a timelapse adventure"
