@@ -381,8 +381,12 @@
               </div>
             </fieldset>
 
+            <p aria-live="polite" class="form-submit-message hide">The form was submitted successfully</p>
+
             <div class="actions">
-              <button class="button button-primary" aria-description="Submiting data to the service">Submit</button>
+              <button class="submit-button button button-primary" aria-description="Submiting data to the service">
+                Submit
+              </button>
               <button class="button button-secondary" aria-description="Caceling clean all fields">Cancel</button>
             </div>
           </form>
@@ -442,7 +446,7 @@
       </div>
     </footer>
 
-    <div id="modal-card" class="modal hidden">
+    <div id="modal-card" class="modal hidden" aria-describedby="modal-content">
       <div class="modal-content">
         <button
           class="modal-close"
@@ -455,7 +459,7 @@
         <div class="modal-image">
           <img src="https://source.unsplash.com/random/?sig=2" alt="Best customers story's logo" />
         </div>
-        <div class="content">
+        <div class="content" id="modal-content">
           <h2 class="title">Best airways</h2>
           <div class="subtitle">Our way to success</div>
           <p>At the beginning we were a small company with two planes and no customers</p>

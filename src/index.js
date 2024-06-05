@@ -6,6 +6,13 @@ import '@fortawesome/fontawesome-free/css/all.css';
 const tabs = document.querySelector('.section.section-no-bottom-padding.is-bg-interactive');
 const tabButtons = tabs.querySelectorAll('.tab');
 const tabPanels = tabs.querySelectorAll('.tab-panel');
+const submitButton = document.querySelector('.contact-form .submit-button');
+
+submitButton.addEventListener('click', (event) => {
+  event.preventDefault();
+  event.stopImmediatePropagation();
+  document.querySelector('.form-submit-message').classList.remove('hide');
+});
 
 function handleTabClick(event) {
   // hide all tab panels
