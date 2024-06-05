@@ -467,7 +467,14 @@
       </div>
     </footer>
 
-    <div id="modal-card" class="modal hidden" aria-describedby="modal-content">
+    <div
+      id="modal-card"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-card-title"
+      class="modal hidden"
+      aria-describedby="modal-content"
+    >
       <div class="modal-content">
         <button
           class="modal-close"
@@ -481,7 +488,7 @@
           <img src="https://source.unsplash.com/random/?sig=2" alt="Best customers story's logo" />
         </div>
         <div class="content" id="modal-content">
-          <h2 class="title">Best airways</h2>
+          <h2 id="modal-card-title" class="title">Best airways</h2>
           <div class="subtitle">Our way to success</div>
           <p>At the beginning we were a small company with two planes and no customers</p>
           <p>After we implemented accessibility features everything changed</p>
@@ -492,7 +499,13 @@
       </div>
     </div>
 
-    <div id="modal-image" class="modal hidden">
+    <div
+      id="modal-image"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Details of other best customer's story"
+      class="modal hidden"
+    >
       <div class="modal-content is-huge is-image">
         <button
           class="modal-close"
