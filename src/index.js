@@ -22,11 +22,13 @@ function handleTabClick(event) {
   // mark all tabs as unselected
   tabButtons.forEach((tab) => {
     tab.removeAttribute('tabindex');
+    tab.setAttribute('aria-selected', false);
     tab.classList.remove('is-active');
   });
   // mark the clicked tab as selected
   this.classList.add('is-active');
   this.setAttribute('tabindex', 0);
+  this.setAttribute('aria-selected', true);
   this.focus();
   // find the associated tabPanel and show it
   const { id } = event.currentTarget;
