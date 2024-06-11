@@ -80,6 +80,25 @@ tabButtons.forEach((button, index) => {
   });
 });
 
+// mobile-navbar
+const navbarButton = document.querySelector('.navbar-mobile-button');
+const navlist = document.querySelector('.navbar-list');
+navbarButton.addEventListener('click', (event) => {
+  event.stopImmediatePropagation();
+  if (navlist.classList.contains('mobile-hidden')) {
+    navlist.classList.remove('mobile-hidden');
+    navlist.setAttribute('aria-expanded', true);
+  } else {
+    navlist.classList.add('mobile-hidden');
+    navlist.setAttribute('aria-expanded', false);
+  }
+});
+window.addEventListener('resize', () => {
+  navlist.classList.add('mobile-hidden');
+  navlist.setAttribute('aria-expanded', false);
+});
+
+// modal
 const modalButtons = document.querySelectorAll('.modal-button');
 const modalCloseButtons = document.querySelectorAll('.modal-close');
 

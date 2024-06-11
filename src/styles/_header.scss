@@ -41,6 +41,9 @@ header {
   // Navigation
   .navbar {
     height: min-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
     &-mobile-button {
       display: flex;
@@ -75,7 +78,9 @@ header {
       list-style: none;
 
       @media screen and (max-width: 375px) {
-        display: none;
+        &.mobile-hidden {
+          display: none;
+        }
       }
 
       @media screen and (max-width: 800px) {

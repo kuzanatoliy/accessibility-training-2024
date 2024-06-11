@@ -19,12 +19,17 @@
         </a>
 
         <nav id="navbarMenu" class="navbar" aria-label="Navigation bar">
-          <button class="navbar-mobile-button" data-target="navbarMenu" aria-label="Open menu">
+          <button
+            aria-controls="navabarlist"
+            class="navbar-mobile-button"
+            data-target="navbarMenu"
+            aria-label="Open menu"
+          >
             <span></span>
             <span></span>
             <span></span>
           </button>
-          <ul class="navbar-list">
+          <ul id="navbarlist" class="navbar-list mobile-hidden">
             <li class="navbar-list-item">
               <a href="/" class="navbar-link">Home</a>
             </li>
