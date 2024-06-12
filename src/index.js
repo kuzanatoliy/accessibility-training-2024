@@ -110,3 +110,13 @@ function showModal(event) {
 
 modalButtons.forEach((button) => button.addEventListener('click', showModal));
 modalCloseButtons.forEach((button) => button.addEventListener('click', showModal));
+
+// navbar
+const navbarlinks = document.querySelectorAll('.navbar-link');
+tabButtons.forEach((button, index) => {
+  //button.addEventListener('click', handleTabClick);
+  button.addEventListener('keydown', (event) => {
+    var i = index;
+    console.log('called', i);
+  });
+});

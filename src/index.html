@@ -29,25 +29,29 @@
             <span></span>
             <span></span>
           </button>
-          <ul id="navbarlist" class="navbar-list mobile-hidden">
-            <li class="navbar-list-item">
-              <a href="/" class="navbar-link">Home</a>
+          <ul role="menubar" id="navbarlist" class="navbar-list mobile-hidden">
+            <li role="none" class="navbar-list-item">
+              <a role="menuitem" tabindex="0" aria-current="page" href="/" class="navbar-link">Home</a>
             </li>
-            <li class="navbar-list-item" id="services_sub">
-              <a href="#" class="navbar-link">Services</a>
-              <ul class="sublist" hidden data-panel="services_sub">
-                <li><a href="#">Design</a></li>
-                <li><a href="#">Consult</a></li>
-                <li><a href="#">Engineer</a></li>
-                <li><a href="#">Operate</a></li>
-                <li><a href="#">Optimize</a></li>
+            <li role="none" class="navbar-list-item" id="services_sub">
+              <a role="menuitem" tabindex="-1" aria-expanded="false" aria-haspopup="true" href="#" class="navbar-link"
+                >Services</a
+              >
+              <ul role="menu" class="sublist" hidden data-panel="services_sub">
+                <li role="none"><a role="menuitem" tabindex="-1" aria-current="page" href="#">Design</a></li>
+                <li role="none"><a role="menuitem" tabindex="-1" aria-current="page" href="#">Consult</a></li>
+                <li role="none"><a role="menuitem" tabindex="-1" aria-current="page" href="#">Engineer</a></li>
+                <li role="none"><a role="menuitem" tabindex="-1" aria-current="page" href="#">Operate</a></li>
+                <li role="none"><a role="menuitem" tabindex="-1" aria-current="page" href="#">Optimize</a></li>
               </ul>
             </li>
             <li class="navbar-list-item" id="stories_sub">
-              <a href="#" class="navbar-link">Success stories</a>
-              <ul class="sublist" hidden data-panel="stories_sub">
-                <li><a href="#">Best stories</a></li>
-                <li><a href="#">Others</a></li>
+              <a role="menuitem" tabindex="-1" aria-haspopup="true" aria-expanded="false" href="#" class="navbar-link"
+                >Success stories</a
+              >
+              <ul role="menu" class="sublist" hidden data-panel="stories_sub">
+                <li role="none"><a role="menuitem" tabindex="-1" aria-current="page" href="#">Best stories</a></li>
+                <li role="none"><a role="menuitem" tabindex="-1" aria-current="page" href="#">Others</a></li>
               </ul>
             </li>
           </ul>
