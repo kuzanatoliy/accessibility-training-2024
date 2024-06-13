@@ -39,7 +39,7 @@ function handleTabClick(event) {
 tabButtons.forEach((button, index) => {
   button.addEventListener('click', handleTabClick);
   button.addEventListener('keydown', (event) => {
-    var i = index;
+    let i = index;
     if (event.key === 'ArrowLeft') {
       event.stopPropagation();
       if (i === 0) {
@@ -113,10 +113,149 @@ modalCloseButtons.forEach((button) => button.addEventListener('click', showModal
 
 // navbar
 const navbarlinks = document.querySelectorAll('.navbar-link');
-tabButtons.forEach((button, index) => {
-  //button.addEventListener('click', handleTabClick);
-  button.addEventListener('keydown', (event) => {
-    var i = index;
-    console.log('called', i);
+navbarlinks.forEach((link, index) => {
+  const sublinks = link.parentElement.querySelectorAll('.sublist [role="menuitem"]');
+  sublinks.forEach((sublink, subindex) => {
+    sublink.addEventListener('keydown', (event) => {
+      let i = subindex;
+      let pi = index;
+      if (event.key === 'ArrowDown') {
+        event.stopPropagation();
+        event.preventDefault();
+        if (i === 0) {
+          i = sublinks.length;
+        }
+        document.activeElement.removeAttribute('tabindex');
+        sublinks[i - 1].focus();
+      }
+      if (event.key === 'ArrowUp') {
+        event.stopPropagation();
+        event.preventDefault();
+        if (i === sublinks.length - 1) {
+          i = -1;
+        }
+        document.activeElement.removeAttribute('tabindex');
+        sublinks[i + 1].focus();
+      }
+      if (event.key === 'ArrowLeft') {
+        event.stopPropagation();
+        if (pi === 0) {
+          pi = navbarlinks.length;
+        }
+        navbarlinks[pi - 1].focus();
+        if (navbarlinks[pi - 1].hasAttribute('aria-expanded')) {
+          navbarlinks[pi - 1].setAttribute('aria-expanded', true);
+        }
+        navbarlinks[index].setAttribute('aria-expanded', false);
+      }
+      if (event.key === 'ArrowRight') {
+        event.stopPropagation();
+        if (pi === navbarlinks.length - 1) {
+          pi = -1;
+        }
+        navbarlinks[pi + 1].focus();
+        if (navbarlinks[pi + 1].hasAttribute('aria-expanded')) {
+          navbarlinks[pi + 1].setAttribute('aria-expanded', true);
+        }
+        navbarlinks[index].setAttribute('aria-expanded', false);
+      }
+      if (event.key === 'Home') {
+        event.stopPropagation();
+        event.preventDefault();
+        sublinks[0].focus();
+      }
+      if (event.key === 'End') {
+        event.stopPropagation();
+        event.preventDefault();
+        sublinks[sublinks.length - 1].focus();
+      }
+      let ii = subindex + 1;
+      if (sublinks.length === ii) {
+        ii = 0;
+      }
+      while (ii !== subindex) {
+        if (event.key.toLowerCase() === sublinks[ii].textContent.toLowerCase()[0]) {
+          event.stopPropagation();
+          event.preventDefault();
+          sublinks[ii].focus();
+          return;
+        }
+        ii++;
+        if (sublinks.length === ii) {
+          ii = 0;
+        }
+      }
+    });
+  });
+  link.parentElement.addEventListener('mouseover', () => {
+    if (link.hasAttribute('aria-expanded')) {
+      link.setAttribute('aria-expanded', true);
+    }
+  });
+  link.parentElement.addEventListener('mouseout', () => {
+    if (link.hasAttribute('aria-expanded')) {
+      link.setAttribute('aria-expanded', false);
+    }
+  });
+  link.addEventListener('keydown', (event) => {
+    let i = index;
+    if (event.key === 'ArrowLeft') {
+      event.stopPropagation();
+      if (i === 0) {
+        i = navbarlinks.length;
+      }
+      navbarlinks[index].setAttribute('aria-expanded', false);
+      navbarlinks[i - 1].focus();
+    }
+    if (event.key === 'ArrowRight') {
+      event.stopPropagation();
+      if (i === navbarlinks.length - 1) {
+        i = -1;
+      }
+      navbarlinks[index].setAttribute('aria-expanded', false);
+      navbarlinks[i + 1].focus();
+    }
+    if (event.key === 'ArrowDown') {
+      if (link.hasAttribute('aria-expanded') && sublinks.length) {
+        event.stopPropagation();
+        event.preventDefault();
+        link.setAttribute('aria-expanded', true);
+        sublinks[0].focus();
+      }
+    }
+    if (event.key === 'ArrowUp') {
+      if (link.hasAttribute('aria-expanded') && sublinks.length) {
+        event.stopPropagation();
+        event.preventDefault();
+        link.setAttribute('aria-expanded', true);
+        sublinks[sublinks.length - 1].focus();
+      }
+    }
+    if (event.key === 'Home') {
+      event.stopPropagation();
+      event.preventDefault();
+      navbarlinks[0].focus();
+    }
+    if (event.key === 'End') {
+      event.stopPropagation();
+      event.preventDefault();
+      navbarlinks[navbarlinks.length - 1].focus();
+    }
+    let ii = index + 1;
+    if (navbarlinks.length === ii) {
+      ii = 0;
+    }
+    while (ii !== index) {
+      if (event.key.toLowerCase() === navbarlinks[ii].textContent.toLowerCase()[0]) {
+        event.stopPropagation();
+        event.preventDefault();
+        navbarlinks[ii].focus();
+        return;
+      }
+      ii++;
+      if (navbarlinks.length === ii) {
+        ii = 0;
+      }
+    }
   });
 });

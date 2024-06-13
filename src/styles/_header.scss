@@ -128,18 +128,20 @@ header {
         }
       }
 
-      &:hover {
-        .sublist {
-          display: block;
+      .sublist li:focus-within {
+        @include focus();
+      }
 
-          li {
-            cursor: pointer;
-          }
+      [aria-expanded='true'] + .sublist {
+        display: block;
 
-          a {
-            text-decoration: none;
-            color: $main-color;
-          }
+        li {
+          cursor: pointer;
+        }
+
+        a {
+          text-decoration: none;
+          color: $main-color;
         }
       }
     }
